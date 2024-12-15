@@ -5,11 +5,11 @@ using namespace std;
 
 
 struct Person {
-    string name;         
-    int birthday;       
-    int birthMonth;      
-    int birthYear;      
-    string birthPlace;   
+    string name;
+    int birthday;
+    int birthMonth;
+    int birthYear;
+    string birthPlace;
 };
 int calcAge(const Person& person, int currentDay, int currentMonth, int currentYear) {
     int age = currentYear - person.birthYear;
@@ -23,25 +23,24 @@ int calcAge(const Person& person, int currentDay, int currentMonth, int currentY
 }
 
 int main() {
-    SetConsoleOutputCP(1251);
-    SetConsoleCP(1251);
+
     int currentDay = 13;
     int currentMonth = 6;
     int currentYear = 2024;
 
     Person person;
-    person.name = "Дмитро Іванович";
+    person.name = "Dmytro Ivanovych";
     person.birthday = 16;
     person.birthMonth = 10;
     person.birthYear = 1998;
-    person.birthPlace = "Дніпро";
+    person.birthPlace = "Dnipro";
     int age = calcAge(person, currentDay, currentMonth, currentYear);
 
 
-    cout << "Ім'я: " << person.name << endl;
-    cout << "Дата народження: " << person.birthday << "." << person.birthMonth << "." << person.birthYear << endl;
-    cout << "Місце народження: " << person.birthPlace << endl;
-    cout << "Вік: " << age << " років" << endl;
+    cout << "Name: " << person.name << endl;
+    cout << "Date of birth: " << person.birthday << "." << person.birthMonth << "." << person.birthYear << endl;
+    cout << "Place of birth: " << person.birthPlace << endl;
+    cout << "Age: " << age << " years" << endl;
 
     return 0;
 }
